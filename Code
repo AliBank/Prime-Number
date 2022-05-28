@@ -1,0 +1,58 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    
+    int k=0;
+    int a;
+    int j;
+    int i;
+    int flag;
+    int dizi[100];
+    int loop;
+    int z;
+    
+   for(z=0; z<=99; z++)
+      dizi[z]=0;
+    
+    
+    for (i=500; i<=599; i++)
+    
+    {
+   
+    a = round(sqrt(i));
+    j=2;
+    flag=0;
+     
+     
+     while ( (j<=a) && (flag==0) )
+       {
+           if ( (i%j) == 0)
+           {
+                  flag=1;
+           }
+           ++j;
+       }   
+       
+            
+            if (flag==0)
+              {
+                dizi[k]=i; 
+                k++;
+                
+               }
+               
+    }
+    
+    
+    for(loop = 0; loop < 100; loop++)
+     {
+         if (dizi[loop] != 0) 
+       printf("%d ", dizi[loop]);
+       printf("\n");
+     }
+   
+    return 0;
+}
